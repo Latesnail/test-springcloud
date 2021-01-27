@@ -1,0 +1,6 @@
+data:
+  env: config-single-client-dev.yml
+  user:
+    username: single-client-user
+    password: 123456
+
