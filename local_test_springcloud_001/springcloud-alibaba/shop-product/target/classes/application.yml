@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: service-product
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mysql?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: 304f6dc7-f8b7-4a40-996c-29de101685a6

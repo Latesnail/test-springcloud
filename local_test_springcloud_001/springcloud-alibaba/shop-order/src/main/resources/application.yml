@@ -1,0 +1,28 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: service-Order
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mysql?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    database: mysql
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: 304f6dc7-f8b7-4a40-996c-29de101685a6
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
+feign:
+  sentinel:
+    enabled: true
